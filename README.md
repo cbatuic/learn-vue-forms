@@ -1,5 +1,5 @@
 # learn-vue-forms
- Learn Vue Forms
+  Learn Vue Forms using Axios and HTTP Methods
 
 ## Setup (clone)
 ```bash
