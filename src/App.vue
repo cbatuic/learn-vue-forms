@@ -1,30 +1,62 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Menubar from "primevue/menubar";
+import { useRouter } from 'vue-router';
+import router from "./router";
+import { ref } from "vue";
+
+const items = [
+        {
+          label: "Home",
+          icon: "pi pi-fw pi-home",
+          command: () => {
+            router.push('/');
+          }
+        },
+        {
+          label: "Users",
+          icon: "pi pi-fw pi-list",
+          route: "/users",
+          command: () => {
+            router.push('/users');
+          }
+        },
+        {
+          label: "Categories",
+          icon: "pi pi-fw pi-list",
+          route: "/categories",
+          command: () => {
+            router.push('/categories');
+          }
+        },
+        {
+          label: "Expenses",
+          icon: "pi pi-fw pi-list",
+          route: "/expenses",
+          command: () => {
+            router.push('/expenses');
+          }
+        }
+      ];
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+    <div>  
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li>Users</li>
+        <ul>
+          <li><a href="/usersgetall">Get All Users</a></li>
+          <li><a href="/usersgetid">Get User</a></li>
+          <li><a href="/userspost">Post User</a></li>
+          <li><a href="/usersput">Put User</a></li>
+          <li><a href="/usersdelete">Delete User</a></li>
+        </ul>
+      </ul>
+      <router-view></router-view>
+    </div>
+
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>
