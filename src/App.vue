@@ -46,7 +46,7 @@ const items = [
         <li>Users</li>
         <ul>
           <li><a href="/usersgetall">Get All Users</a></li>
-          <li><a href="/usersgetid">Get Users</a></li>
+          <li><a href="/usersgetid">Get User</a></li>
           <li><a href="/userspost">Post User</a></li>
           <li><a href="/usersput">Put User</a></li>
           <li><a href="/usersdelete">Delete User</a></li>
